@@ -1,0 +1,32 @@
+button {
+  width: 15rem;
+  height: 3rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 1rem;
+  cursor: pointer;
+  color: white;
+  outline:0;
+  border: none;
+}
+  
+button.green {
+  background: #28C76F;
+}
+button.green:hover {
+  background:#79F1A4;
+}
+button.green:active {
+  background: #28C76F;
+}
+
+button.red {
+  background: #EA5455;
+}
+button.red:hover {
+  background: #E96D71;
+}
+button.red:active {
+  background: #EA5455;
+}

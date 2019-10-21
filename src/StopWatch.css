@@ -1,0 +1,15 @@
+.clockFace {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btnBox {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}

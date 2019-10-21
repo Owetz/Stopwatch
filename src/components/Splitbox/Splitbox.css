@@ -1,0 +1,13 @@
+.splitBox {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 0;
+    align-items: center;
+    height: 50vh;
+    overflow: auto;
+}
+
+p {
+    font-size: 2rem;
+    margin: .5rem 0;
+}
