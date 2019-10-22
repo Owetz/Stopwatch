@@ -1,9 +1,9 @@
 .splitBox {
     display: flex;
     flex-direction: column;
-    margin: 2rem auto 0;
+    margin: 2rem auto;
     align-items: center;
-    height: 40vh;
+    height: 35vh;
     width: 60vw;
     overflow: auto;
 }
@@ -18,7 +18,24 @@
     background-color: rgba(245,245,245,0.2);
 }
 
-p {
+.splitBox p {
     font-size: 2rem;
     margin: .5rem 0;
+    position: relative;
+    text-shadow: 0 0 5px black;
 }
+
+.fadeinright-enter {
+    opacity: 0;
+    left: -20px;
+}
+
+.fadeinright-enter.fadeinright-enter-active {
+    opacity: 1;
+    left: 0;
+    transition: all 300ms ease-in;
+}
+
+.fadeinright-leave{
+    opacity: 1;
+} 

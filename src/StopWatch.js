@@ -63,7 +63,7 @@ class StopWatch extends React.Component {
     return (
       <main>
         <Clockface time={showTime} />
-
+        <Splitbox splits={splits} />
         <div className="btnBox">
           <Controller 
           name={isRunning ? 'Stopp' : (time === 0 ? 'Start':'Fortsätt')} 
@@ -75,8 +75,6 @@ class StopWatch extends React.Component {
           onClick={isRunning ? splitClock : resetClock} 
           class={isRunning ? 'green':'red'}/>
         </div>
-        
-        <Splitbox splits={splits} />
       </main>
     );
   }

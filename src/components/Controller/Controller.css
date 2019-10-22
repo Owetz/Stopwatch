@@ -1,6 +1,7 @@
 button {
   width: 15rem;
   height: 3rem;
+  position:relative;
   border-radius: 1rem;
   font-size: 1rem;
   font-weight: bold;
@@ -9,13 +10,17 @@ button {
   color: white;
   outline:0;
   border: none;
+  -webkit-animation: fadein-up .7s ease-in-out;
+  animation: fadein-up .7s ease-in-out;
 }
   
 button.green {
   background: #28C76F;
+  box-shadow: 0 4px 10px -5px #28C76F;
 }
 button.green:hover {
   background:#79F1A4;
+  box-shadow: 0 4px 10px -5px #79F1A4;
 }
 button.green:active {
   background: #28C76F;
@@ -23,10 +28,28 @@ button.green:active {
 
 button.red {
   background: #EA5455;
+  box-shadow: 0 4px 10px -5px #EA5455;
 }
 button.red:hover {
   background: #E96D71;
+  box-shadow: 0 4px 10px -5px #E96D71;
 }
 button.red:active {
   background: #EA5455;
 }
+
+@keyframes fadein-up {
+  from {opacity: 0; bottom:-10px;}
+  to {opacity: 1; bottom: 0;}
+}
+
+@-moz-keyframes fadein-up{
+  from {opacity: 0; bottom:-10px;}
+  to {opacity: 1; bottom: 0;}
+}
+
+@-webkit-keyframes fadein-up{
+  from {opacity: 0; bottom:-10px;}
+  to {opacity: 1; bottom: 0;}
+}
+

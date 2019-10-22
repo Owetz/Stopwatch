@@ -3,4 +3,23 @@
     width: 300px;
     margin: 0 auto;
     text-align: center;
+    -moz-animation: fadein .5s ease-in-out;
+    -webkit-animation: fadein .5s ease-in-out;
+    animation: fadein .5s ease-in-out;
+    text-shadow: 0 0 5px black;
+}
+
+@-webkit-keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-moz-keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
