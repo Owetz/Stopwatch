@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Stopwatch/static/css/main.86e2e414.chunk.css",
+    "main.css": "/Stopwatch/static/css/main.127dabc0.chunk.css",
     "main.js": "/Stopwatch/static/js/main.a9fbfbfb.chunk.js",
     "main.js.map": "/Stopwatch/static/js/main.a9fbfbfb.chunk.js.map",
     "runtime-main.js": "/Stopwatch/static/js/runtime-main.0482b81d.js",
@@ -8,14 +8,14 @@
     "static/js/2.3e4eda96.chunk.js": "/Stopwatch/static/js/2.3e4eda96.chunk.js",
     "static/js/2.3e4eda96.chunk.js.map": "/Stopwatch/static/js/2.3e4eda96.chunk.js.map",
     "index.html": "/Stopwatch/index.html",
-    "precache-manifest.b8da639cc3a3df292050522c96e98e76.js": "/Stopwatch/precache-manifest.b8da639cc3a3df292050522c96e98e76.js",
+    "precache-manifest.4b457c4a4df46c38cc9d74b2d19e1f82.js": "/Stopwatch/precache-manifest.4b457c4a4df46c38cc9d74b2d19e1f82.js",
     "service-worker.js": "/Stopwatch/service-worker.js",
-    "static/css/main.86e2e414.chunk.css.map": "/Stopwatch/static/css/main.86e2e414.chunk.css.map"
+    "static/css/main.127dabc0.chunk.css.map": "/Stopwatch/static/css/main.127dabc0.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.0482b81d.js",
     "static/js/2.3e4eda96.chunk.js",
-    "static/css/main.86e2e414.chunk.css",
+    "static/css/main.127dabc0.chunk.css",
     "static/js/main.a9fbfbfb.chunk.js"
   ]
 }
