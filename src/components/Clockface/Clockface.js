@@ -5,7 +5,7 @@ function Clockface({time}) {
 
     return (
     <div className="clockFace">
-        {time}
+        <p>{time}</p>
     </div>
     )
 }

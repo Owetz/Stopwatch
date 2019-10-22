@@ -9,7 +9,7 @@ class StopWatch extends React.Component {
     super(props)
     this.state = {
       time: 0,
-      showTime: '0:0.00',
+      showTime: '00:00.00',
       splits: [],
       isRunning: false,
     }
@@ -27,20 +27,22 @@ class StopWatch extends React.Component {
   timeFormat(time) {
     let min = Math.floor((time / (1000 * 60)) % 60);
     let sec = ((time % 60000)/ 1000).toFixed(2);
-    return `${min}:${sec}`;
+    return `${min === 0 ? '00:': (min.length < 2 ? `${min}:`:`0${min}:`)}${sec.length < 5 ? `0${sec}` : sec}`;
   }
-
+  
   // Controllermethods
   startClock() {
-    this.setState(state => {
-        const startTime = Date.now() - this.state.time;
-        this.timer = setInterval(() => {
-          this.setState({isRunning:true, time: Date.now() - startTime, showTime:this.timeFormat(Date.now()-startTime)});
-        });
+    const startTime = Date.now() - this.state.time;
+    this.timer = setInterval(() => {
+      this.setState({
+        isRunning: true,
+        time: Date.now() - startTime,
+        showTime: this.timeFormat(Date.now() - startTime)
+      });
     });
   }
   resetClock() {
-    this.setState({time: 0, isRunning:false, splits:[], showTime:'0:0.00'});
+    this.setState({time: 0, isRunning:false, splits:[], showTime:'00:00.00'});
   }
   stopClock() {
     clearInterval(this.timer);
@@ -60,12 +62,18 @@ class StopWatch extends React.Component {
     
     return (
       <main>
-        <h1>StopWatch</h1>
         <Clockface time={showTime} />
 
         <div className="btnBox">
-          <Controller name={isRunning ? 'stop' : (time === 0 ? 'start':'resume')} onClick={isRunning ? stopClock : startClock} class={isRunning ? 'red' : 'green'}/>
-          <Controller name={isRunning ? 'split' : 'reset'} onClick={isRunning ? splitClock : resetClock} class={isRunning ? 'green':'red'}/>
+          <Controller 
+          name={isRunning ? 'Stopp' : (time === 0 ? 'Start':'Fortsätt')} 
+          onClick={isRunning ? stopClock : startClock} 
+          class={isRunning ? 'red' : 'green'}/>
+
+          <Controller 
+          name={isRunning ? 'Varv' : 'Återställ'} 
+          onClick={isRunning ? splitClock : resetClock} 
+          class={isRunning ? 'green':'red'}/>
         </div>
         
         <Splitbox splits={splits} />
